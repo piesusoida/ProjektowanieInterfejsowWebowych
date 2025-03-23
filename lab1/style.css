@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: powderblue;
+  }
+#zaloguj{
+    position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+}
+
+#koszyk{
+    position: absolute;
+            top: 50px;
+            right: 0;
+            padding: 10px;
+}
+
+#nowa{
+    position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+            color: green;
+            background-color: black;
+}
+#pozycja{
+    position: relative;
+            padding: 50px;
+            color: red;
+
+}
