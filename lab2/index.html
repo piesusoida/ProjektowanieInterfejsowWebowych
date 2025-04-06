@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+<title>ToDoRoboty!!!</title>
+</head>
+<body>
+   
+    <section class="dodawanie"> 
+        <input id="pole" placeholder="wpisz">  </input>
+        <button id="dodaj" onclick="todo_add()"> +</button>   
+        <select id="szukanie" onchange="updateList()">
+            <option value="lista1">lista1</option>
+            <option value="lista2">lista2</option>
+            <option value="lista3">lista3</option>
+          </select> 
+    </section>
+
+    <section class="listy" >
+        <h1 id="title_list_lista1" onclick="hide('lista1')">Lista 1</h1>
+            <input type="text" id="searchInput_lista1" placeholder="Search list items..." oninput="filterList('lista1')">
+            <div class="checkbox-container">
+                <input type="checkbox" id="caseSensitiveCheckbox_lista1" onchange="filterList('lista1')">
+                <label for="caseSensitiveCheckbox_lista1">Case Sensitive</label>
+            </div>
+            <ul id="lista1" ></ul>
+        </div>
+        <h1 id="title_list_lista2" onclick="hide('lista2')">Lista 2</h1>
+            <input type="text" id="searchInput_lista2" placeholder="Search list items..." oninput="filterList('lista2')">
+            <div class="checkbox-container">
+                <input type="checkbox" id="caseSensitiveCheckbox_lista2" onchange="filterList('lista2')">
+                <label for="caseSensitiveCheckbox_lista2">Case Sensitive</label>
+            </div>
+            <ul id="lista2" ></ul>
+        </div>
+        <h1 id="title_list_lista3" onclick="hide('lista3')">Lista 3</h1>
+            <input type="text" id="searchInput_lista3" placeholder="Search list items..." oninput="filterList('lista3')">
+            <div class="checkbox-container">
+                <input type="checkbox" id="caseSensitiveCheckbox_lista3" onchange="filterList('lista3')">
+                <label for="caseSensitiveCheckbox_lista3">Case Sensitive</label>
+            </div>
+            <ul id="lista3"></ul>
+        </div>
+    </section>
+   
+    <section id="bin">
+        <h> Trash</h>
+        <p id="binContent">Empty</p>
+        <button id="restoreButton" onclick="restore()" disabled>Restore</button>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirm Removal</h2>
+            </div>
+            <p id="confirmMessage">Are you sure you want to remove this position?</p>
+            <div class="modal-footer">
+                <button class="cancel" onclick="closeModal()">Cancel</button>
+                <button id="confirmDelete" onclick="confirmRemove()">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+  <script src="script.js">  </script>
+</body>
+</html>
