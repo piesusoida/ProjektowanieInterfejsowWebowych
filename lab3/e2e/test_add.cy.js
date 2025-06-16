@@ -1,4 +1,4 @@
-// cypress/e2e/new-entry.cy.js
+
 describe('Add and Search for a New Entry', () => {
   Cypress.on("uncaught:exception", (err) =>
   err.message.includes("Hydration failed") ? false : true
@@ -13,14 +13,14 @@ describe('Add and Search for a New Entry', () => {
     cy.get('input').eq(2).type('200');    // Pages
     cy.get('input').eq(3).type('20');     // Price or Quantity
 
-    // Submit the form (assumes a button is used to submit)
+    
      cy.get('button')
       .contains(/add/i)
-      .click({ force: true }); // Adjust text as needed// Adjust text as needed
+      .click({ force: true }); 
       cy.wait(500);
 
-     cy.get('nav')           // assumes your navbar is inside a <nav> element
-      .contains(/avaible/i) // change the text to whatever your navbar link says
+     cy.get('nav')           
+      .contains(/avaible/i) 
       .click();
 
   });

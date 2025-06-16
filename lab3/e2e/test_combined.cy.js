@@ -29,24 +29,24 @@ describe('Add and Search for a New Entry', () => {
     cy.get('input').eq(0).type('Narnia'); // Title
     cy.get('input').eq(1).type('Lewis');  // Author
     cy.get('input').eq(2).type('200');    // Pages
-    cy.get('input').eq(3).type('20');     // Price or Quantity
+    cy.get('input').eq(3).type('20');     // Price
 
-    // Submit the form (assumes a button is used to submit)
+    
      cy.get('button')
       .contains(/add/i)
-      .click({ force: true }); // Adjust text as needed// Adjust text as needed
+      .click({ force: true }); 
       cy.wait(500);
 
-     cy.get('nav')           // assumes your navbar is inside a <nav> element
-      .contains(/avaible/i) // change the text to whatever your navbar link says
+     cy.get('nav')           
+      .contains(/avaible/i) 
       .click();
     
-      cy.get('select#query')  // adjust the selector to your actual filter element
+      cy.get('select#query') 
       .select('pages'); 
       cy.get('input[type="search"], input[placeholder*="Search"]').type('20');
 
-    // // Assert that exactly one result is shown
-    cy.get('main.list-vertical > *')  // grab children of main container
+    
+    cy.get('main.list-vertical > *')  
       .should('have.length', 2)
       .and('contain.text','Narnia')       // exactly one book
     cy.wait(500);
