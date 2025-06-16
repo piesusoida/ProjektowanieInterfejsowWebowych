@@ -12,6 +12,14 @@ export const BooksProvider = ({ children }) => {
       price: "30",
       type: "academia",
     }, 
+    {
+      id: 2,
+      text: "Harry Potter",
+      author: "Rowling",
+      pages: "42",
+      price: "40",
+      type: "academia",
+    }, 
     
   ]);
 

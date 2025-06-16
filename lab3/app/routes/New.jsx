@@ -69,7 +69,7 @@ export default function New() {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <button onClick={handleNewBook}>Add</button>
+        <button id="Add" onClick={handleNewBook} >Add</button>
       </form>
     </main>
   );
